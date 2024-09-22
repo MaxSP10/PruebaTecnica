@@ -1,0 +1,52 @@
+:root {
+    --primary-color: #000f37;
+    --secondary-color: #ffffff;
+    --tertiary-color: #eff6ff;
+  }
+
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 80px; 
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 25px;
+    width: auto;
+  }
+
+ .title-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 20px;
+ }
+
+ .ciclo-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 20px;
+ }
+
+ .detalle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 20px; 
+ }
+
+.title-container,
+.ciclo-container {
+  text-align: left;
+  width: 100%;
+}
