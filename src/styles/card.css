@@ -17,7 +17,7 @@
 }
 
 .card-image {
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
     margin-bottom: 10px;
 }
@@ -26,6 +26,14 @@
     font-family: 'Roboto', sans-serif;
     margin-top: 0;
     color: #333;
-    font-size: 25px;
+    font-size: clamp(16px, 3vw, 25px);
     text-decoration: none;
 }
+
+@media screen and (max-width: 220px) {
+    .card-image {
+        width: 100%;
+    }
+    
+}
+
