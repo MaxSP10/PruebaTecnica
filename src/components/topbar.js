@@ -16,8 +16,11 @@ function TopBar() {
                 <img src={logo} alt='logo' className='logo' />
             </div>
             
-            <div className='photo-container'>
-                <img src={photo} alt='photo' className='photo' />
+            <div className='user-info'>
+                <span className='user-name'>Nombre Apellido</span>
+                <div className='photo-container'>
+                    <img src={photo} alt='photo' className='photo' />
+                </div>
             </div>
         </div>
 
