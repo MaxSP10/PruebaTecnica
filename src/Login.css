@@ -7,13 +7,13 @@
 .Login-left {
   flex: 1;
   max-width: 55%;
-  background-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
 }
 
 .Login-right {
   max-width: 45%;
   flex: 1;
-  background-color: var(--tertiary-color);
+  background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: center;
