@@ -11,12 +11,12 @@ function Cursos() {
     
     <main className='main-container'>
         <div className='detalle-container'>
-          <div className='title-container'>
-            <h1>Cursos</h1>
-          </div>
-          <div className='ciclo-container'>
-            <h2>2024 - Ciclo 2 Agosto PREG (001) (Actual)</h2>
-          </div>
+            <div className='title-container'>
+              <h2>Cursos</h2>
+            </div>
+            <div className='ciclo-container'>
+              <h2>2024 - Ciclo 2 Agosto PREG (001) (Actual)</h2>
+            </div>
         </div>
 
         <div className='cards-wrapper'>
