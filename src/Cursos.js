@@ -1,26 +1,14 @@
 import './Cursos.css';
-import { useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import logo from './images/logo.png';
-import SideBar from './components/navbar';
 import Card from './components/card';
+import TopBar from './components/topbar';
 
 function Cursos() {
-  const [showSideBar, setShowSideBar] = useState(false);
   return (
 
     <div className="Cursos">
 
-    <header>
-      <GiHamburgerMenu onClick={() => setShowSideBar(!showSideBar)} className='menu-hamburger'/>
-      <div className='logo-container'>
-          <img src={logo} alt='logo' className='logo' />
-      </div>
-      {showSideBar && <SideBar />}
-    </header>
+      <TopBar />
     
-
-
     <main className='main-container'>
         <div className='detalle-container'>
           <div className='title-container'>

@@ -1,23 +1,12 @@
 import './Especifico.css';
-import { useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import logo from './images/logo.png';
-import SideBar from './components/navbar';
 import Test from './components/test';
+import TopBar from './components/topbar';
 
 function Especifico() {
-  const [showSideBar, setShowSideBar] = useState(false);
-  return (
+    return (
 
     <div className="App">
-
-    <header>
-      <GiHamburgerMenu onClick={() => setShowSideBar(!showSideBar)} className='menu-hamburger'/>
-      <div className='logo-container'>
-          <img src={logo} alt='logo' className='logo' />
-      </div>
-    </header>
-    {showSideBar && <SideBar />}
+      <TopBar />
     <main className='main-container'>
         <div className='detalle-container'>
             <div className='title-container'>

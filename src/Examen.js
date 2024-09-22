@@ -1,8 +1,6 @@
 import './Examen.css';
 import { useState, useEffect } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import logo from './images/logo.png';
-import SideBar from './components/navbar';
+import TopBar from './components/topbar';
 import PreguntaRadioBox from './components/PreguntaRadioBox';
 import PreguntaCheckBox from './components/PreguntaCheckBox';
 import PreguntaTextBox from './components/PreguntaTextBox';
@@ -10,6 +8,8 @@ import PreguntaTextBoxNoFormat from './components/PreguntaTextBoxNoFormat';
 import PreguntaCoding from './components/PreguntaCoding';
 
 function Examen() {
+
+    /* Opciones y validaciones del formulario */
     const opcionesRadio = ["Opción 1", "Opción 2", "Opción 3"];
     const opcionesCheckBox = ["Opción A", "Opción B", "Opción C"];
     
@@ -22,8 +22,10 @@ function Examen() {
     });
     
     const [isFormValid, setIsFormValid] = useState(false);
-    const [showSideBar, setShowSideBar] = useState(false);
 
+
+
+    /* Funciones para manejar los cambios en los inputs */
     const handleRadioChange = (value) => {
         setFormData(prev => ({ ...prev, radioSelection: value }));
     };
@@ -53,18 +55,16 @@ function Examen() {
             formData.codingContent.trim() !== '';
 
         setIsFormValid(isValid);
-        // Log only if form validity changes
     }, [formData]);
+
+
+
+
+
 
     return (
         <div className="Examen">
-            <header>
-                <GiHamburgerMenu onClick={() => setShowSideBar(!showSideBar)} className='menu-hamburger' />
-                <div className='logo-container'>
-                    <img src={logo} alt='logo' className='logo' />
-                </div>
-            </header>
-            {showSideBar && <SideBar />}
+            <TopBar />
             <div className='Detalle-Examen'>
                 <h1>Practica 1 de Fisica II</h1>
             </div>
