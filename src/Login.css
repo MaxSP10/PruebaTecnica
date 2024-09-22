@@ -6,12 +6,15 @@
 
 .Login-left {
   flex: 1;
-  max-width: 55%;
+  max-width: 45%;
   background-color: var(--tertiary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Login-right {
-  max-width: 45%;
+  max-width: 55%;
   flex: 1;
   background-color: var(--secondary-color);
   display: flex;
