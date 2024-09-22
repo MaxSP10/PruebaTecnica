@@ -1,4 +1,3 @@
-
 header {
     position: sticky;
     top: 0;
@@ -37,6 +36,17 @@ header {
   height: 50px;
   width: auto;
   border-radius: 50%;
+  margin-right: 5px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  margin-right: 5px;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
@@ -81,3 +91,4 @@ header {
       font-size: calc(4px + 1vw);
     }
   }
+
