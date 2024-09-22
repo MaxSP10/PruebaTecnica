@@ -1,27 +1,45 @@
 import React, { useState } from 'react';
+import ReactQuill from 'react-quill'; 
+import 'react-quill/dist/quill.snow.css'; 
 import DOMPurify from 'dompurify';
 import '../styles/PreguntaTextBoxNoFormat.css';
 
 const PreguntaTextBox = ({ pregunta, onChange, value }) => {
   const [respuesta, setRespuesta] = useState(value || '');
 
-  const handleChange = (e) => {
-    const rawInput = e.target.value;
-    setRespuesta(rawInput);
-    const clean = DOMPurify.sanitize(rawInput);
-    onChange(clean);
+  // Configuración de las herramientas del editor
+  const modules = {
+    toolbar: [
+      [{ 'header': '1' }, { 'header': '2' }],
+      ['bold', 'italic', 'underline', 'strike'], 
+      [{'list': 'ordered'}, {'list': 'bullet'}],
+      ['link', 'image'], // Botones de enlace e imagen
+      ['clean'] // Botón de limpiar
+    ],
+  };
+
+  const handleChange = (content) => {
+    const cleanContent = DOMPurify.sanitize(content);
+    setRespuesta(cleanContent);
+    onChange(cleanContent); //reporta el contenido
+  };
+
+
+  const isFieldEmpty = () => {
+    const cleanContent = DOMPurify.sanitize(respuesta);
+    return cleanContent.trim().length === 0;
   };
 
   return (
     <div className='ContainerTextBox'>
       <h3>{pregunta}</h3>
-      <textarea 
-        className='textareaTextBox' 
-        value={respuesta} 
-        onChange={handleChange} 
-        rows="5" 
+      <ReactQuill
+        value={respuesta}
+        onChange={handleChange}
+        modules={modules}
         placeholder='Escriba su respuesta'
       />
+      {isFieldEmpty()}
     </div>
   );
 };
