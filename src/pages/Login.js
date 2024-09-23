@@ -2,11 +2,7 @@ import React from 'react'
 import '../pagesstyles/Login.css'
 import logo from '../images/logoalter.png'
 import { useNavigate } from 'react-router-dom';
-<<<<<<< HEAD:src/Login.js
-import examen from './images/imagenexamen.png'
-=======
 import examen from '../images/imagenexamen.png'
->>>>>>> QuillLib:src/pages/Login.js
 
 const Login = () => {
   const navigate = useNavigate();
