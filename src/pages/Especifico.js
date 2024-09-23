@@ -1,6 +1,6 @@
-import './Especifico.css';
-import Test from './components/test';
-import TopBar from './components/topbar';
+import '../pagesstyles/Especifico.css';
+import Test from '../components/test';
+import TopBar from '../components/topbar';
 
 function Especifico() {
     return (

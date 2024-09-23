@@ -1,11 +1,11 @@
-import './Examen.css';
+import '../pagesstyles/Examen.css';
 import { useState, useEffect } from 'react';
-import TopBar from './components/topbar';
-import PreguntaRadioBox from './components/PreguntaRadioBox';
-import PreguntaCheckBox from './components/PreguntaCheckBox';
-import PreguntaTextBox from './components/PreguntaTextBox';
-import PreguntaTextBoxNoFormat from './components/PreguntaTextBoxNoFormat';
-import PreguntaCoding from './components/PreguntaCoding';
+import TopBar from '../components/topbar';
+import PreguntaRadioBox from '../components/PreguntaRadioBox';
+import PreguntaCheckBox from '../components/PreguntaCheckBox';
+import PreguntaTextBox from '../components/PreguntaTextBox';
+import PreguntaTextBoxNoFormat from '../components/PreguntaTextBoxNoFormat';
+import PreguntaCoding from '../components/PreguntaCoding';
 
 function Examen() {
 

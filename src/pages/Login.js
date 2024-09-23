@@ -1,6 +1,6 @@
 import React from 'react'
-import './Login.css'
-import logo from './images/logoalter.png'
+import '../pagesstyles/Login.css'
+import logo from '../images/logoalter.png'
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
